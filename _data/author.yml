@@ -1,0 +1,19 @@
+name: Gar
+dp: ./pic/eun.jpg
+description: "
+  <p>
+    Hello, I'm Gar. Check some of my random stuff below!
+  </p>
+  <br/>
+  <p>
+    -> have a great day <-
+  </P>
+"
+email: aryotegarpradigdo7@gmail.com
+contact:
+  - title: linkedin
+    url: https://www.linkedin.com/in/aryotegar
+  - title: github
+    url: https://github.com/gar-7
+  - title: email
+    url: mailto:aryotegarpradigdo7@gmail.com
