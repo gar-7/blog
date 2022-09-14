@@ -1,7 +1,7 @@
-title: Try to Survive
+title: The Honeybadger
 markdown: kramdown
 url: ""
-baseurl: "/blog/"
+baseurl: "/blog"
 
 # for atom feed
 author:
