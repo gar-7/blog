@@ -1,7 +1,7 @@
 title: The Honeybadger
 markdown: kramdown
-url: ""
-baseurl: ""
+url: "https://gar-7.github.io"
+baseurl: "/blog"
 
 # for atom feed
 author:
