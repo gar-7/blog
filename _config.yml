@@ -1,7 +1,7 @@
 title: The Honeybadger
 markdown: kramdown
 url: ""
-baseurl: ""
+baseurl: "/blog"
 
 # for atom feed
 author:
