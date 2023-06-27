@@ -23,7 +23,7 @@ Menampilkan user yang ada dalam group **Adminsitrator** dengan `net localgroup`.
 ![alt](/blog/pic/investigating_windows/4.png)
 
 # Malicious Task
-Saat menjalankan machine, terdapat popup berupa window terminal yang muncul secara terus-menerus. Setelah memeriksa Task Scheduler, ditemukan malicious task bernama "Clean file system" yang mana dijalankan setiap jam 4:55 PM.xx
+Saat menjalankan machine, terdapat popup berupa window terminal yang muncul secara terus-menerus. Setelah memeriksa Task Scheduler, ditemukan malicious task bernama "Clean file system" yang mana dijalankan setiap jam 4:55 PM.
 Command tersebut terlihat seperti command tools [netcat](https://nmap.org/ncat/) dengan option `-l 1348` untuk melakukan listening pada port 1348.
 ![alt](/blog/pic/investigating_windows/9.png)
 Ditemukan juga task "Game Over" yang mana akan berjalan setiap 5 menit sekali. Task tersebut mengeksekusi modul `sekurlsa` dari tools [Mimikatz](https://github.com/ParrotSec/mimikatz) yang berfungsi untuk dump password dari memory.
@@ -48,3 +48,9 @@ Terdapat kemungkinan bahwa Threat actor memanfaatkan fitur upload file pada web 
 ![alt](/blog/pic/investigating_windows/14.png)
 ![alt](/blog/pic/investigating_windows/15.png)
 
+# Kesimpulan
+Berikut adalah beberapa point yang dapat dijadikan kesimpulan mengenai apa yang dilakukan Threat Actor pada compromised Windows Machine.
+- Initial Access dari Threat Actor adalah dengan Exploit Public-Facing Application melalui fitur upload file dari webserver. 
+- Threat Actor berhasil mendapatkan akses dan melakukan privilege escalation sehingga mendapatkan privilege Administrator.
+- Untuk mempertahankan presistence, Threat Actor melakukan beberapa teknik seperti DNS Spoofing, merubah settingan firewall, dan menggunakan Scheduled Task.
+- Terdapat aktivitas credential dumping menggunakan Mimikatz yang menunjukan adanya aktivitas Lateral Movement.
